@@ -6,39 +6,157 @@
 <title>TUTURU — عالم الأنمي</title>
 <style>
 :root{color-scheme:dark;--bg:#090810;--surface:#14111f;--surface2:#1b1729;--text:#f8f5ff;--muted:#a7a0b8;--purple:#a78bfa;--purple2:#7c3aed;--line:#30283f;--pink:#f0abfc}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.6}button,input{font:inherit}button{cursor:pointer}.root{min-height:100vh;background:radial-gradient(ellipse at 78% 0%,#24153d 0,transparent 35%),var(--bg)}.wrap{width:min(1180px,92%);margin:auto}.topline{height:3px;background:linear-gradient(90deg,#7c3aed,#f0abfc,#60a5fa)}header{position:sticky;top:0;z-index:10;background:rgba(9,8,16,.88);backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.nav{display:flex;align-items:center;gap:24px;min-height:76px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-size:24px;font-weight:900;letter-spacing:1.5px;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#a78bfa,#7c3aed);box-shadow:0 0 28px #8b5cf655;font-size:21px}.navlinks{display:flex;gap:20px;align-items:center}.navlinks a{color:var(--muted);text-decoration:none;font-size:14px}.navlinks a.active,.navlinks a:hover{color:white}.search{margin-inline-start:auto;display:flex;align-items:center;gap:9px;max-width:290px;width:100%;background:#171321;border:1px solid var(--line);padding:10px 13px;border-radius:13px}.search input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:white}.iconbtn,.menu-btn{border:1px solid var(--line);background:var(--surface);color:white;border-radius:12px;width:42px;height:42px;display:grid;place-items:center}.menu-btn{display:none}.hero{padding:38px 0 28px}.hero-card{min-height:410px;position:relative;overflow:hidden;border:1px solid #ffffff18;border-radius:26px;background:linear-gradient(90deg,#0c0915 0%,rgba(12,9,21,.92) 38%,rgba(12,9,21,.16) 100%),radial-gradient(circle at 75% 30%,#a855f755,transparent 24%),linear-gradient(135deg,#17122a,#302044 55%,#11101d);display:flex;align-items:center;padding:clamp(24px,5vw,58px)}.hero-card:before{content:'T';position:absolute;right:10%;top:-130px;font-size:520px;line-height:1;font-weight:900;color:#c4b5fd0c;transform:rotate(8deg);pointer-events:none}.orbit{position:absolute;right:10%;top:12%;width:300px;height:300px;border:1px solid #c4b5fd30;border-radius:50%;box-shadow:0 0 80px #a855f71a,inset 0 0 70px #a855f711}.orbit:before,.orbit:after{content:'';position:absolute;border:1px solid #c4b5fd26;border-radius:50%;inset:25px}.orbit:after{inset:58px}.hero-content{position:relative;z-index:1;max-width:570px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#e9d5ff;background:#8b5cf625;border:1px solid #a78bfa45;padding:6px 12px;border-radius:99px;font-size:12px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.2;margin:18px 0 12px;letter-spacing:-1px}.hero h1 span{color:var(--purple)}.hero p{max-width:460px;color:#c0b8d0;margin:0 0 22px}.meta{display:flex;flex-wrap:wrap;gap:9px;color:#c9c2d7;font-size:13px;margin-bottom:24px}.meta span{background:#ffffff0c;border:1px solid #ffffff12;padding:4px 10px;border-radius:8px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:11px 17px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700}.btn-primary{color:white;background:linear-gradient(135deg,#9b70f5,#7137cf);box-shadow:0 8px 25px #7c3aed35}.btn-secondary{color:#eee7ff;background:#ffffff0d;border:1px solid #ffffff20}.section{padding:22px 0 28px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.section-title{margin:0;font-size:23px;display:flex;align-items:center;gap:10px}.section-title .bar{height:25px;width:4px;border-radius:4px;background:var(--purple)}.seeall{border:0;background:transparent;color:#c4b5fd}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}.filter{border:1px solid var(--line);background:var(--surface);color:#bcb4cd;padding:7px 14px;border-radius:999px;font-size:13px}.filter.selected{background:#8b5cf628;border-color:#a78bfa80;color:#e9ddff}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}.anime-card{min-width:0;position:relative}.poster{position:relative;overflow:hidden;aspect-ratio:3/4;border-radius:16px;border:1px solid #ffffff15;background:linear-gradient(155deg,var(--c1),var(--c2));display:flex;align-items:flex-end;padding:13px;isolation:isolate}.poster:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 26%,#ffffff35,transparent 18%),linear-gradient(180deg,transparent 25%,#080710dd 100%);z-index:-1}.poster:after{content:attr(data-symbol);position:absolute;top:14%;left:50%;transform:translateX(-50%);font-size:clamp(60px,8vw,100px);font-weight:900;color:#ffffff36;text-shadow:0 0 35px #ffffff30}.poster .poster-tag{position:absolute;top:10px;right:10px;background:#090810b8;border:1px solid #ffffff2a;border-radius:7px;padding:3px 7px;font-size:10px}.poster .poster-name{font-size:19px;font-weight:900;text-shadow:0 2px 14px #000;position:relative}.poster .poster-sub{font-size:11px;color:#ded6ed;position:relative}.card-info{padding:10px 2px 0}.card-title{font-weight:700;margin:0;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.card-sub{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:5px;margin-top:4px}.heart{position:absolute;top:10px;left:10px;z-index:2;border:1px solid #ffffff2a;background:#090810b8;color:white;border-radius:10px;width:34px;height:34px}.heart.fav{color:#f9a8d4;background:#83184377}.episode{position:absolute;bottom:10px;right:10px;left:10px;border-radius:8px;background:#090810b8;border:1px solid #ffffff1e;padding:5px 7px;font-size:11px;text-align:center}.empty{display:none;padding:35px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:15px}.banner{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid #ffffff14;border-radius:18px;padding:23px 25px;background:linear-gradient(100deg,#211432,#151020 70%);margin:10px 0 25px}.banner h3{margin:0 0 4px}.banner p{margin:0;color:var(--muted);font-size:13px}.banner .spark{font-size:35px;color:#d8b4fe}.footer{border-top:1px solid #ffffff12;padding:26px 0 34px;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#211833;border:1px solid #8b5cf6;color:#fff;padding:11px 17px;border-radius:12px;transition:.25s;z-index:30;box-shadow:0 12px 40px #0008}.toast.show{opacity:1;transform:translate(-50%,0)}.mobile-links{display:none;padding:0 0 14px;gap:9px;flex-wrap:wrap}.mobile-links.open{display:flex}.mobile-links a{color:#d9d0e8;text-decoration:none;background:var(--surface);border:1px solid var(--line);padding:7px 12px;border-radius:99px;font-size:13px}
-@media(max-width:850px){.navlinks{display:none}.menu-btn{display:grid}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-card{min-height:360px}.orbit{right:-10%;opacity:.65}}
-@media(max-width:560px){.wrap{width:94%}.nav{min-height:66px;gap:9px}.brand{font-size:20px;gap:7px}.brand-mark{width:35px;height:35px}.search{max-width:none;padding:9px 10px}.iconbtn{display:none}.hero{padding-top:20px}.hero-card{min-height:390px;padding:23px;background:linear-gradient(90deg,#0c0915ed,#0c0915a8),radial-gradient(circle at 80% 20%,#a855f755,transparent 35%),linear-gradient(135deg,#17122a,#302044 55%,#11101d)}.orbit{right:-23%;top:5%;width:240px;height:240px}.hero h1{font-size:38px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.section-title{font-size:20px}.poster{border-radius:13px}.banner{padding:17px}.banner .btn{padding:9px 11px;font-size:12px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.6}button,input{font:inherit}button{cursor:pointer}.root{min-height:100vh;background:radial-gradient(ellipse at 78% 0%,#24153d 0,transparent 35%),var(--bg)}.wrap{width:min(1180px,92%);margin:auto}.topline{height:3px;background:linear-gradient(90deg,#7c3aed,#f0abfc,#60a5fa)}header{position:sticky;top:0;z-index:10;background:rgba(9,8,16,.88);backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.nav{display:flex;align-items:center;gap:24px;min-height:76px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-size:24px;font-weight:900;letter-spacing:1.5px;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#a78bfa,#7c3aed);box-shadow:0 0 28px #8b5cf655;font-size:21px}.navlinks{display:flex;gap:20px;align-items:center}.navlinks a{color:var(--muted);text-decoration:none;font-size:14px}.navlinks a.active,.navlinks a:hover{color:white}.search{margin-inline-start:auto;display:flex;align-items:center;gap:9px;max-width:290px;width:100%;background:#171321;border:1px solid var(--line);padding:10px 13px;border-radius:13px}.search input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:white}.iconbtn,.menu-btn{border:1px solid var(--line);background:var(--surface);color:white;border-radius:12px;width:42px;height:42px;display:grid;place-items:center}.menu-btn{display:none}.hero{padding:38px 0 28px}.hero-card{min-height:410px;position:relative;overflow:hidden;border:1px solid #ffffff18;border-radius:26px;background:linear-gradient(90deg,#0c0915 0%,rgba(12,9,21,.92) 38%,rgba(12,9,21,.16) 100%),radial-gradient(circle at 75% 30%,#a855f755,transparent 24%),linear-gradient(135deg,#17122a,#302044 55%,#11101d);display:flex;align-items:center;padding:clamp(24px,5vw,58px)}.hero-card:before{content:'T';position:absolute;right:10%;top:-130px;font-size:520px;line-height:1;font-weight:900;color:#c4b5fd0c;transform:rotate(8deg);pointer-events:none}.orbit{position:absolute;right:10%;top:12%;width:300px;height:300px;border:1px solid #c4b5fd30;border-radius:50%;box-shadow:0 0 80px #a855f71a,inset 0 0 70px #a855f711}.orbit:before,.orbit:after{content:'';position:absolute;border:1px solid #c4b5fd26;border-radius:50%;inset:25px}.orbit:after{inset:58px}.hero-content{position:relative;z-index:1;max-width:570px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#e9d5ff;background:#8b5cf625;border:1px solid #a78bfa45;padding:6px 12px;border-radius:99px;font-size:12px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.2;margin:18px 0 12px;letter-spacing:-1px}.hero h1 span{color:var(--purple)}.hero p{max-width:460px;color:#c0b8d0;margin:0 0 22px}.meta{display:flex;flex-wrap:wrap;gap:9px;color:#c9c2d7;font-size:13px;margin-bottom:24px}.meta span{background:#ffffff0c;border:1px solid #ffffff12;padding:4px 10px;border-radius:8px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:11px 17px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700}.btn-primary{color:white;background:linear-gradient(135deg,#9b70f5,#7137cf);box-shadow:0 8px 25px #7c3aed35}.btn-secondary{color:#eee7ff;background:#ffffff0d;border:1px solid #ffffff20}.section{padding:22px 0 28px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.section-title{margin:0;font-size:23px;display:flex;align-items:center;gap:10px}.section-title .bar{height:25px;width:4px;border-radius:4px;background:var(--purple)}.seeall{border:0;background:transparent;color:#c4b5fd}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}.filter{border:1px solid var(--line);background:var(--surface);color:#bcb4cd;padding:7px 14px;border-radius:999px;font-size:13px}.filter.selected{background:#8b5cf628;border-color:#a78bfa80;color:#e9ddff}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}.anime-card{min-width:0;position:relative;cursor:pointer}.poster{position:relative;overflow:hidden;aspect-ratio:3/4;border-radius:16px;border:1px solid #ffffff15;background:linear-gradient(155deg,var(--c1),var(--c2));display:flex;align-items:flex-end;padding:13px;isolation:isolate}.poster:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 26%,#ffffff35,transparent 18%),linear-gradient(180deg,transparent 25%,#080710dd 100%);z-index:-1}.poster:after{content:attr(data-symbol);position:absolute;top:14%;left:50%;transform:translateX(-50%);font-size:clamp(60px,8vw,100px);font-weight:900;color:#ffffff36;text-shadow:0 0 35px #ffffff30}.poster .poster-tag{position:absolute;top:10px;right:10px;background:#090810b8;border:1px solid #ffffff2a;border-radius:7px;padding:3px 7px;font-size:10px}.poster .poster-name{font-size:19px;font-weight:900;text-shadow:0 2px 14px #000;position:relative}.poster .poster-sub{font-size:11px;color:#ded6ed;position:relative}.card-info{padding:10px 2px 0}.card-title{font-weight:700;margin:0;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.card-sub{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:5px;margin-top:4px}.heart{position:absolute;top:10px;left:10px;z-index:2;border:1px solid #ffffff2a;background:#090810b8;color:white;border-radius:10px;width:34px;height:34px}.heart.fav{color:#f9a8d4;background:#83184377}.empty{display:none;padding:35px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:15px}.banner{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid #ffffff14;border-radius:18px;padding:23px 25px;background:linear-gradient(100deg,#211432,#151020 70%);margin:10px 0 25px}.banner h3{margin:0 0 4px}.banner p{margin:0;color:var(--muted);font-size:13px}.banner .spark{font-size:35px;color:#d8b4fe}.footer{border-top:1px solid #ffffff12;padding:26px 0 34px;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#211833;border:1px solid #8b5cf6;color:#fff;padding:11px 17px;border-radius:12px;transition:.25s;z-index:30;box-shadow:0 12px 40px #0008}.toast.show{opacity:1;transform:translate(-50%,0)}.mobile-links{display:none;padding:0 0 14px;gap:9px;flex-wrap:wrap}.mobile-links.open{display:flex}.mobile-links a{color:#d9d0e8;text-decoration:none;background:var(--surface);border:1px solid var(--line);padding:7px 12px;border-radius:99px;font-size:13px}
+
+/* صفحات التفاصيل الجديدة */
+.view-section{display:none}.view-section.active{display:block}
+.details-container{padding:25px 0}
+.back-btn{background:var(--surface);border:1px solid var(--line);color:white;padding:8px 16px;border-radius:10px;margin-bottom:20px;display:inline-flex;align-items:center;gap:6px}
+.details-box{display:grid;grid-template-columns:280px 1fr;gap:30px;background:var(--surface);border:1px solid var(--line);padding:25px;border-radius:20px}
+.details-poster{aspect-ratio:3/4;border-radius:14px;display:flex;align-items:flex-end;padding:20px;position:relative;background:linear-gradient(155deg,#3b235b,#101e3b)}
+.details-info h1{margin:0 0 10px;font-size:32px}
+.info-tags{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
+.info-tag{background:var(--surface2);border:1px solid var(--line);padding:6px 12px;border-radius:8px;font-size:13px;color:var(--muted)}
+.info-tag span{color:white;font-weight:bold}
+.seasons-bar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.season-tab{background:var(--surface2);border:1px solid var(--line);color:var(--text);padding:8px 16px;border-radius:10px;cursor:pointer}
+.season-tab.active{background:var(--purple2);border-color:var(--purple)}
+.episodes-placeholder{border:2px dashed var(--line);border-radius:15px;padding:30px;text-align:center;color:var(--muted);margin-top:20px}
+
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.details-box{grid-template-columns:1fr}}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
-<body><div class="root">
+<body>
+<div class="root">
 <div class="topline"></div>
 <header><div class="wrap nav">
 <a class="brand" href="#home" aria-label="TUTURU الرئيسية"><span class="brand-mark">と</span><span>TUTURU</span></a>
-<nav class="navlinks" aria-label="القائمة الرئيسية"><a class="active" href="#home">الرئيسية</a><a href="#featured">أنميات مميزة</a><a href="#latest">أحدث الحلقات</a><a href="#popular">الأكثر مشاهدة</a></nav>
+<nav class="navlinks" aria-label="القائمة الرئيسية"><a class="active" href="#home">الرئيسية</a><a href="#featured">أنميات مميزة</a></nav>
 <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث عن أنمي..." aria-label="ابحث عن أنمي"></label>
-<button class="iconbtn" id="favFilter" aria-label="عرض المفضلة" title="المفضلة">♡</button><button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
-</div><div class="wrap mobile-links" id="mobileLinks"><a href="#home">الرئيسية</a><a href="#featured">أنميات مميزة</a><a href="#latest">أحدث الحلقات</a><a href="#popular">الأكثر مشاهدة</a></div></header>
-<main id="home" class="wrap">
-<section class="hero"><div class="hero-card"><div class="orbit"></div><div class="hero-content"><div class="eyebrow">✦ بوابتك إلى عوالم الأنمي</div><h1>كل عالمٍ يحكي قصة.<br><span>اختر حكايتك.</span></h1><p>اكتشف مغامرات جديدة، وتابع أنمياتك المفضلة، واعثر على عالمك القادم في مكان واحد.</p><div class="meta"><span>✦ فانتازيا</span><span>◈ مغامرة</span><span>⌁ غموض</span><span>واجهة تجريبية</span></div><div class="actions"><button class="btn btn-primary" id="exploreBtn">▶ استكشف الأنميات</button><button class="btn btn-secondary" id="randomBtn">✧ فاجئني بأنمي</button></div></div></div></section>
-<section class="section" id="featured"><div class="section-head"><h2 class="section-title"><span class="bar"></span> أنميات مميزة</h2><button class="seeall" id="clearSearch">عرض الكل ←</button></div><div class="filters" id="filters"><button class="filter selected" data-filter="all">الكل</button><button class="filter" data-filter="action">أكشن</button><button class="filter" data-filter="fantasy">فانتازيا</button><button class="filter" data-filter="drama">دراما</button><button class="filter" data-filter="sports">رياضي</button></div><div class="grid" id="featuredGrid">
-<article class="anime-card" data-title="ري زيرو re zero" data-category="fantasy drama"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#3b235b;--c2:#101e3b" data-symbol="零"><span class="poster-tag">اختيار المحرر</span><div><div class="poster-name">Re:ZERO</div><div class="poster-sub">فانتازيا · دراما</div></div></div><div class="card-info"><p class="card-title">Re:Zero</p><div class="card-sub"><span>ري زيرو</span><span>★ 9.2</span></div></div></article>
-<article class="anime-card" data-title="ون بيس one piece" data-category="action"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#8b432e;--c2:#243d69" data-symbol="海"><span class="poster-tag">مغامرة</span><div><div class="poster-name">ONE PIECE</div><div class="poster-sub">أكشن · مغامرة</div></div></div><div class="card-info"><p class="card-title">One Piece</p><div class="card-sub"><span>ون بيس</span><span>★ 9.0</span></div></div></article>
-<article class="anime-card" data-title="موشوكو تينسي mushoku tensei" data-category="fantasy drama"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#547c91;--c2:#352b50" data-symbol="夢"><span class="poster-tag">عالم آخر</span><div><div class="poster-name">MUSHOKU</div><div class="poster-sub">فانتازيا · دراما</div></div></div><div class="card-info"><p class="card-title">Mushoku Tensei</p><div class="card-sub"><span>موشوكو تينسي</span><span>★ 8.8</span></div></div></article>
-<article class="anime-card" data-title="هجوم العمالقة attack on titan" data-category="action drama"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#8b493b;--c2:#252735" data-symbol="壁"><span class="poster-tag">ملحمي</span><div><div class="poster-name">ATTACK ON TITAN</div><div class="poster-sub">أكشن · غموض</div></div></div><div class="card-info"><p class="card-title">Attack on Titan</p><div class="card-sub"><span>هجوم العمالقة</span><span>★ 9.1</span></div></div></article>
-<article class="anime-card" data-title="بلو لوك blue lock" data-category="sports"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#167fa2;--c2:#161b4c" data-symbol="⚽"><span class="poster-tag">رياضة</span><div><div class="poster-name">BLUE LOCK</div><div class="poster-sub">رياضة · منافسة</div></div></div><div class="card-info"><p class="card-title">Blue Lock</p><div class="card-sub"><span>بلو لوك</span><span>★ 8.2</span></div></div></article>
-</div><div class="empty" id="emptyFeatured">ما لقينا أنمي يطابق بحثك. جرّب اسمًا آخر ✦</div></section>
-<div class="banner"><div><h3>✦ اكتشف حكايتك القادمة</h3><p>استخدم البحث أو اختر تصنيفك المفضل لتبدأ الاستكشاف.</p></div><span class="spark">✧</span></div>
-<section class="section" id="latest"><div class="section-head"><h2 class="section-title"><span class="bar"></span> أحدث الحلقات</h2><button class="seeall" id="latestAll">عرض الكل ←</button></div><div class="grid" id="latestGrid">
-<article class="anime-card" data-title="جوجوتسو كايسن jujutsu kaisen" data-category="action"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#6b2c66;--c2:#15162f" data-symbol="呪"><span class="episode">الحلقة  —</span><div><div class="poster-name">JUJUTSU KAISEN</div><div class="poster-sub">أكشن · خارق للطبيعة</div></div></div><div class="card-info"><p class="card-title">Jujutsu Kaisen</p><div class="card-sub"><span>جوجوتسو كايسن</span><span>الحلقات</span></div></div></article>
-<article class="anime-card" data-title="سولو ليفيلينج solo leveling" data-category="action fantasy"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#283a68;--c2:#12121e" data-symbol="影"><span class="episode">الحلقة  —</span><div><div class="poster-name">SOLO LEVELING</div><div class="poster-sub">أكشن · فانتازيا</div></div></div><div class="card-info"><p class="card-title">Solo Leveling</p><div class="card-sub"><span>سولو ليفيلينج</span><span>الحلقات</span></div></div></article>
-<article class="anime-card" data-title="قاتل الشياطين demon slayer" data-category="action fantasy"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#326b62;--c2:#25213e" data-symbol="滅"><span class="episode">الحلقة  —</span><div><div class="poster-name">DEMON SLAYER</div><div class="poster-sub">أكشن · فانتازيا</div></div></div><div class="card-info"><p class="card-title">Demon Slayer</p><div class="card-sub"><span>قاتل الشياطين</span><span>الحلقات</span></div></div></article>
-<article class="anime-card" data-title="ديث نوت death note" data-category="drama"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#4a243d;--c2:#11111d" data-symbol="死"><span class="episode">كامل</span><div><div class="poster-name">DEATH NOTE</div><div class="poster-sub">غموض · نفسي</div></div></div><div class="card-info"><p class="card-title">Death Note</p><div class="card-sub"><span>ديث نوت</span><span>الحلقات</span></div></div></article>
-<article class="anime-card" data-title="هنتر هنتر hunter x hunter" data-category="action fantasy"><button class="heart" aria-label="أضف للمفضلة">♡</button><div class="poster" style="--c1:#397b6b;--c2:#25315d" data-symbol="狩"><span class="episode">كلاسيكي</span><div><div class="poster-name">HUNTER × HUNTER</div><div class="poster-sub">مغامرة · أكشن</div></div></div><div class="card-info"><p class="card-title">Hunter x Hunter</p><div class="card-sub"><span>هنتر هنتر</span><span>الحلقات</span></div></div></article>
-</div><div class="empty" id="emptyLatest">لا توجد نتائج في هذا القسم.</div></section>
-<section class="section" id="popular"><div class="section-head"><h2 class="section-title"><span class="bar"></span> الأكثر مشاهدة</h2></div><div class="filters"><button class="filter selected" id="popularWeek">هذا الأسبوع</button><button class="filter" id="popularAll">كل الوقت</button></div><p id="popularMessage" style="color:var(--muted);font-size:13px">استكشف اختيارات المجتمع — ستظهر بيانات المشاهدة الفعلية عند ربط الموقع بمصدر بيانات.</p></section>
+<button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
+</div></header>
+
+<!-- الواجهة الرئيسية -->
+<main id="homeView" class="view-section active wrap">
+<section class="hero"><div class="hero-card"><div class="orbit"></div><div class="hero-content"><div class="eyebrow">✦ بوابتك إلى عوالم الأنمي</div><h1>كل عالمٍ يحكي قصة.<br><span>اختر حكايتك.</span></h1><p>اكتشف مغامرات جديدة، وتابع أنمياتك المفضلة.</p></div></div></section>
+<section class="section" id="featured"><div class="section-head"><h2 class="section-title"><span class="bar"></span> القائمة الرئيسية للأنمي</h2></div>
+<div class="grid" id="featuredGrid">
+
+<!-- أنمي 1: ري زيرو -->
+<article class="anime-card" onclick="openDetails(this)" 
+  data-title="ري زيرو re zero" 
+  data-name="Re:Zero — ري زيرو" 
+  data-year="2016" 
+  data-season="ربيع 2016" 
+  data-source="رواية خفيفة (Light Novel)" 
+  data-episodes="50 حلقة (مقسمة على مواسم)" 
+  data-duration="24 دقيقة" 
+  data-genres="فانتازيا، دراما، تشويق، سفر عبر الزمن" 
+  data-seasons="الموسم الأول, الموسم الثاني الجزء 1, الموسم الثاني الجزء 2">
+<div class="poster" style="--c1:#3b235b;--c2:#101e3b" data-symbol="零"><span class="poster-tag">مستمر</span><div><div class="poster-name">Re:ZERO</div><div class="poster-sub">فانتازيا · دراما</div></div></div>
+<div class="card-info"><p class="card-title">Re:Zero</p><div class="card-sub"><span>ري زيرو</span><span>★ 9.2</span></div></div></article>
+
+<!-- أنمي 2: ون بيس -->
+<article class="anime-card" onclick="openDetails(this)" 
+  data-title="ون بيس one piece" 
+  data-name="ONE PIECE — ون بيس" 
+  data-year="1999" 
+  data-season="خريف 1999" 
+  data-source="مانجا (Manga)" 
+  data-episodes="أكثر من 1100 حلقة" 
+  data-duration="24 دقيقة" 
+  data-genres="أكشن، مغامرة، فانتازيا، كوميديا" 
+  data-seasons="ساقا الإستءباس, ساقا آرلابين, ساقا إنيس لوبي, الساقا الأخيرة">
+<div class="poster" style="--c1:#8b432e;--c2:#243d69" data-symbol="海"><span class="poster-tag">أساطير</span><div><div class="poster-name">ONE PIECE</div><div class="poster-sub">أكشن · مغامرة</div></div></div>
+<div class="card-info"><p class="card-title">One Piece</p><div class="card-sub"><span>ون بيس</span><span>★ 9.0</span></div></div></article>
+
+<!-- أنمي 3: هجوم العمالقة -->
+<article class="anime-card" onclick="openDetails(this)" 
+  data-title="هجوم العمالقة attack on titan" 
+  data-name="Attack on Titan — هجوم العمالقة" 
+  data-year="2013" 
+  data-season="ربيع 2013" 
+  data-source="مانجا (Manga)" 
+  data-episodes="89 حلقة" 
+  data-duration="24 دقيقة (حلقات خاصة أطول)" 
+  data-genres="أكشن، دراما، غموض، عسكري، خيال مظلم" 
+  data-seasons="الموسم الأول, الموسم الثاني, الموسم الثالث, الموسم الأخير">
+<div class="poster" style="--c1:#8b493b;--c2:#252735" data-symbol="壁"><span class="poster-tag">ملحمي</span><div><div class="poster-name">ATTACK ON TITAN</div><div class="poster-sub">أكشن · غموض</div></div></div>
+<div class="card-info"><p class="card-title">Attack on Titan</p><div class="card-sub"><span>هجوم العمالقة</span><span>★ 9.1</span></div></div></article>
+
+</div></section>
 </main>
-<footer class="footer"><div class="wrap footer-inner"><span class="brand" style="font-size:17px"><span class="brand-mark" style="width:30px;height:30px;border-radius:9px;font-size:16px">と</span>TUTURU</span><span>تصميم تجريبي لمفهوم منصة أنمي · غير مرتبط بخدمة بث فعلية</span><span>トゥットゥルー ✦</span></div></footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-</div><script>
-const input=document.getElementById('searchInput');const cards=[...document.querySelectorAll('.anime-card')];let activeFilter='all';let onlyFav=false;const favorites=new Set();let toastTimer;function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2200)}function updateCards(){const q=input.value.trim().toLowerCase();let counts={featured:0,latest:0};cards.forEach(card=>{const title=(card.dataset.title+' '+card.innerText).toLowerCase();const cats=card.dataset.category.split(' ');const matchText=!q||title.includes(q);const matchFilter=activeFilter==='all'||cats.includes(activeFilter);const matchFav=!onlyFav||favorites.has(card);const show=matchText&&matchFilter&&matchFav;card.style.display=show?'':'none';if(show){if(card.closest('#featuredGrid'))counts.featured++;if(card.closest('#latestGrid'))counts.latest++}});document.getElementById('emptyFeatured').style.display=counts.featured?'none':'block';document.getElementById('emptyLatest').style.display=counts.latest?'none':'block'}input.addEventListener('input',updateCards);document.querySelectorAll('.filter[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter[data-filter]').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');activeFilter=btn.dataset.filter;updateCards()}));document.querySelectorAll('.heart').forEach(btn=>btn.addEventListener('click',()=>{const card=btn.closest('.anime-card');if(favorites.has(card)){favorites.delete(card);btn.classList.remove('fav');btn.textContent='♡';toast('تمت إزالة الأنمي من المفضلة')}else{favorites.add(card);btn.classList.add('fav');btn.textContent='♥';toast('أُضيف إلى مفضلتك ♥')}updateCards()}));document.getElementById('favFilter').addEventListener('click',()=>{onlyFav=!onlyFav;document.getElementById('favFilter').textContent=onlyFav?'♥':'♡';document.getElementById('favFilter').style.color=onlyFav?'#f9a8d4':'white';updateCards();toast(onlyFav?'تعرض الآن الأنميات المفضلة':'عرض جميع الأنميات')});document.getElementById('clearSearch').addEventListener('click',()=>{input.value='';activeFilter='all';onlyFav=false;document.querySelectorAll('.filter[data-filter]').forEach(b=>b.classList.toggle('selected',b.dataset.filter==='all'));document.getElementById('favFilter').textContent='♡';updateCards()});document.getElementById('exploreBtn').addEventListener('click',()=>document.getElementById('featured').scrollIntoView({behavior:'smooth'}));document.getElementById('randomBtn').addEventListener('click',()=>{const visible=cards.filter(c=>c.style.display!=='none');const choices=visible.length?visible:cards;const card=choices[Math.floor(Math.random()*choices.length)];toast('✧ اقتراحنا لك: '+card.querySelector('.card-title').textContent);card.scrollIntoView({behavior:'smooth',block:'center'});card.animate([{transform:'scale(1)'},{transform:'scale(1.035)'},{transform:'scale(1)'}],{duration:550})});document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileLinks').classList.toggle('open'));document.getElementById('latestAll').addEventListener('click',()=>{document.
+
+<!-- صفحة تفاصيل الأنمي (تظهر عند النقر على أي أنمي) -->
+<div id="detailsView" class="view-section wrap">
+<div class="details-container">
+<button class="back-btn" onclick="goHome()">← العودة للرئيسية</button>
+<div class="details-box">
+<div class="details-poster" id="detPoster" style="--c1:#3b235b;--c2:#101e3b"><div style="position:relative"><h2 id="detTitlePoster" style="margin:0;font-size:24px">العنوان</h2></div></div>
+<div class="details-info">
+<h1 id="detTitle">اسم الأنمي</h1>
+<div class="info-tags">
+<div class="info-tag">سنة الإصدار: <span id="detYear">-</span></div>
+<div class="info-tag">موسم العرض: <span id="detSeason">-</span></div>
+<div class="info-tag">المصدر: <span id="detSource">-</span></div>
+<div class="info-tag">عدد الحلقات: <span id="detEpisodes">-</span></div>
+<div class="info-tag">مدة الحلقة: <span id="detDuration">-</span></div>
+</div>
+<p style="color:var(--muted)"><strong>التصنيفات:</strong> <span id="detGenres" style="color:white">-</span></p>
+
+<h3 style="margin-top:25px">اختر الموسم:</h3>
+<div class="seasons-bar" id="detSeasonsList">
+<!-- أزرار المواسم تظهر تلقائياً هنا -->
+</div>
+
+<div class="episodes-placeholder">
+  📁 قريباً: سيتم إضافة قائمة الحلقات وروابط المشاهدة لهذا الموسم قريباً.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+const input=document.getElementById('searchInput');const cards=[...document.querySelectorAll('.anime-card')];
+input.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();cards.forEach(card=>{const title=(card.dataset.title+' '+card.innerText).toLowerCase();card.style.display=!q||title.includes(q)?'':'none'});});
+
+function openDetails(card){
+  document.getElementById('homeView').classList.remove('active');
+  document.getElementById('detailsView').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+
+  // تعبئة البيانات من الـ dataset للأنمي الذي تم النقر عليه
+  document.getElementById('detTitle').textContent = card.dataset.name;
+  document.getElementById('detTitlePoster').textContent = card.dataset.name.split('—')[0];
+  document.getElementById('detYear').textContent = card.dataset.year;
+  document.getElementById('detSeason').textContent = card.dataset.season;
+  document.getElementById('detSource').textContent = card.dataset.source;
+  document.getElementById('detEpisodes').textContent = card.dataset.episodes;
+  document.getElementById('detDuration').textContent = card.dataset.duration;
+  document.getElementById('detGenres').textContent = card.dataset.genres;
+
+  // تعبئة أزرار المواسم
+  const seasonsBar = document.getElementById('detSeasonsList');
+  seasonsBar.innerHTML = '';
+  const seasons = card.dataset.seasons.split(',');
+  seasons.forEach((season, index) => {
+    const btn = document.createElement('button');
+    btn.className = index === 0 ? 'season-tab active' : 'season-tab';
+    btn.textContent = season.trim();
+    btn.onclick = () => {
+      document.querySelectorAll('.season-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    };
+    seasonsBar.appendChild(btn);
+  });
+}
+
+function goHome(){
+  document.getElementById('detailsView').classList.remove('active');
+  document.getElementById('homeView').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script></body></html>

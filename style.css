@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tajawal', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+:root {
+  --bg: #0f0f1a;
+  --card: #1a1a2e;
+  --card-hover: #252542;
+  --purple: #7b2cbf;
+  --pink: #e040fb;
+  --text: #eaeaea;
+  --muted: #999;
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --danger: #e74c3c;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(123, 44, 191, 0.3);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+
+.search-box {
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  width: 280px;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.search-box::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.view {
+  display: none;
+  padding: 2rem 0;
+}
+
+.view.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--pink);
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.anime-card {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.anime-card:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+  border-color: var(--purple);
+  box-shadow: 0 10px 25px rgba(123, 44, 191, 0.2);
+}
+
+.poster {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: linear-gradient(135deg, #2a2a48, #1a1a2e);
+}
+
+.anime-card h3 {
+  padding: 0.8rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card-meta {
+  padding: 0 0.8rem 0.8rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  background: var(--purple);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--pink);
+}
+
+.anime-detail {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.detail-header {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.poster-large {
+  width: 220px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background: linear-gradient(135deg, #2a2a48, #1a1a2e);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.detail-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.detail-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--pink);
+}
+
+.meta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  background: var(--success);
+  color: white;
+}
+
+.status.ongoing { background: var(--warning); }
+.status.ended { background: var(--success); }
+.status.upcoming { background: var(--danger); }
+
+.dates, .ep-count {
+  margin: 0.4rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.tag {
+  background: rgba(123, 44, 191, 0.25);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.detail-body h3 {
+  margin: 1.5rem 0 0.6rem;
+  font-size: 1.15rem;
+  color: var(--pink);
+}
+
+.detail-body p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.seasons-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.season-tab {
+  padding: 0.6rem 1.2rem;
+  background: #2a2a48;
+  border: none;
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.season-tab.active {
+  background: var(--purple);
+  color: white;
+}
+
+.player-wrapper {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+}
+
+.player-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.player-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.6rem;
+}
+
+.ep-btn {
+  padding: 0.6rem;
+  background: #2a2a48;
+  border: none;
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ep-btn:hover {
+  background: var(--purple);
+}
+
+.ep-btn.active {
+  background: var(--pink);
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #222;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .anime-detail {
+    padding: 1rem;
+  }
+  .detail-header {
+    justify-content: center;
+    text-align: center;
+  }
+  .anime-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  }
